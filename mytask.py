@@ -28,7 +28,7 @@ class myDetail(BaseModel):
 
 @app.get("/details")
 async def response():
-    return myDetails, header
+    return myDetails
 
 @app.post("/data")
 async def create_data(details : myDetail):
