@@ -14,12 +14,14 @@ class myDetail(BaseModel):
     age: int
     track: int
 
+header = {"Access-Control-Allow-Origin":"*"}
+
 @app.get("/details")
 def response():
-    return myDetails
+    return myDetails, header
 
 @app.post("/data")
 def create_data(details : myDetail):
-    return details.age + details.track
+    return details.age + details.track, header
 
 
