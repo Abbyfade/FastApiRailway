@@ -27,11 +27,11 @@ class myDetail(BaseModel):
 
 
 @app.get("/details")
-def response():
+async def response():
     return myDetails, header
 
 @app.post("/data")
-def create_data(details : myDetail):
+async def create_data(details : myDetail):
     return details.age + details.track
 
 
