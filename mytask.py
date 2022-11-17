@@ -19,7 +19,7 @@ def response():
     return myDetails
 
 @app.post("/data")
-def create_data(details = MyDetail):
+def create_data(details : myDetail):
     return details
 
 
