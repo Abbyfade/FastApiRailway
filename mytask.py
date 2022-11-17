@@ -20,6 +20,6 @@ def response():
 
 @app.post("/data")
 def create_data(details : myDetail):
-    return details
+    return details.age + details.track
 
 
